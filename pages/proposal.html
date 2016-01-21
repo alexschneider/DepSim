@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>Proposal</title>
         <link rel="stylesheet" href="https://alexschneider.github.io/DepSim/theme/css/main.css" />
+        <link href="https://alexschneider.github.io/DepSim/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DepSim Atom Feed" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -11,31 +12,59 @@
 </head>
 
 <body id="index" class="home">
+<a href="https://github.com/alexschneider/DepSim">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
         <header id="banner" class="body">
                 <h1><a href="https://alexschneider.github.io/DepSim/">DepSim </a></h1>
                 <nav><ul>
+                    <li><a href="https://alexschneider.github.io/DepSim/pages/project-plan.html">Project Plan</a></li>
                     <li class="active"><a href="https://alexschneider.github.io/DepSim/pages/proposal.html">Proposal</a></li>
+                    <li><a href="https://alexschneider.github.io/DepSim/pages/requirements.html">Requirements</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
     <h1 class="entry-title">Proposal</h1>
     
-    <h1>Title</h1>
-<h2>Project Name</h2>
+    <div class="toc">
+<ul>
+<li><a href="#title">Title</a><ul>
+<li><a href="#project-name">Project Name</a></li>
+<li><a href="#author">Author</a></li>
+</ul>
+</li>
+<li><a href="#project-description">Project Description</a></li>
+<li><a href="#justification">Justification</a></li>
+<li><a href="#users-point-of-view">User&rsquo;s point of view</a></li>
+<li><a href="#operations-description">Operations Description</a></li>
+<li><a href="#technologies">Technologies</a></li>
+<li><a href="#other-information">Other Information</a><ul>
+<li><a href="#people-involved">People Involved</a></li>
+</ul>
+</li>
+<li><a href="#preliminary-development-schedule">Preliminary Development Schedule</a><ul>
+<li><a href="#milestones">Milestones</a></li>
+</ul>
+</li>
+<li><a href="#questions">Questions?</a></li>
+</ul>
+</div>
+<h1 id="title">Title</h1>
+<h2 id="project-name">Project Name</h2>
 <p>DepSim</p>
-<h2>Author</h2>
+<h2 id="author">Author</h2>
 <p>Alex Schneider</p>
-<h1>Project Description</h1>
+<h1 id="project-description">Project Description</h1>
 <p>The project involves a model and simulator for a deployment to many (on the order of millions) of machines. Rolling out involves deployment to an increasingly larger subset of machines, with pauses between stages to see if errors occur, and if not, building confidence in the release before going forward or rolling back. The project will accurately describe constraints and estimate total rollout time based on certain variables such as the rollout time per domain, delay times, number of domains, and number of regions.</p>
-<h1>Justification</h1>
+<h1 id="justification">Justification</h1>
 <p>The simulator can be used for modeling deployment at large scales to see if certain deployment strategies and models work. It would also work on optimizing the deployment model, sequence, and strategy to get the best possible deployment within the given constraints (e.g. risk).</p>
-<p>In addition to the business implications of the project, this will help me learn about modeling, simulation, and distributed systems, something I don't have much experience in. The project will also help me learn skills useful to my career that I'm starting.</p>
-<h1>User's point of view</h1>
+<p>In addition to the business implications of the project, this will help me learn about modeling, simulation, and distributed systems, something I don&rsquo;t have much experience in. The project will also help me learn skills useful to my career that I&rsquo;m starting.</p>
+<h1 id="users-point-of-view">User&rsquo;s point of view</h1>
 <p>The user point of view is to develop a model with constraints for the simulator to run. The simulator will then return the data and visualize it in an intuitive way for the user. Ideally, there will be a way to graphically design and develop a model, but that may not be possible within the timeframe the project must be developed within.</p>
-<h1>Operations Description</h1>
+<h1 id="operations-description">Operations Description</h1>
 <p>The application will run entirely locally on a system and have no external network access or requests. The user will double click on the application, which will launch an interface that allows them to run the simulation. It will be entirely self contained using PyInstaller, allowing users to easily download and use the application.</p>
-<p>Since the application runs locally and makes no network connections, there are no security concern. </p>
-<h1>Technologies</h1>
+<p>Since the application runs locally and makes no network connections, there are no security concern.</p>
+<h1 id="technologies">Technologies</h1>
 <ul>
 <li>Python</li>
 <li>Bokeh</li>
@@ -49,17 +78,17 @@
 <li>D3.js</li>
 </ul>
 <p>All of these libraries are open source and have licenses which permit me to use them.</p>
-<h1>Other Information</h1>
-<h2>People Involved</h2>
+<h1 id="other-information">Other Information</h1>
+<h2 id="people-involved">People Involved</h2>
 <ul>
 <li>Mike Andrews (Microsoft)</li>
 <li>Dondi</li>
 </ul>
-<h1>Preliminary Development Schedule</h1>
-<h2>Milestones</h2>
+<h1 id="preliminary-development-schedule">Preliminary Development Schedule</h1>
+<h2 id="milestones">Milestones</h2>
 <ol>
 <li>Get all the moving parts working together, SimPy, Bokkeh or D3, PyWebkit, etc. Use sample data for this.</li>
-<li>Develop a simplistic model and simulation that doesn't take into account additional constraints. Figure out visualization</li>
+<li>Develop a simplistic model and simulation that doesn&rsquo;t take into account additional constraints. Figure out visualization</li>
 <li>Develop more complex models and simulations that allow constraints.</li>
 <li>Provide a graphical tool for designing models for simulation.</li>
 <li>Automatically optimize the model</li>
@@ -72,9 +101,16 @@
 <li>10th week</li>
 <li>Time left</li>
 </ol>
-<h1>Questions?</h1>
+<h1 id="questions">Questions?</h1>
 </section>
         <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://alexschneider.github.io/DepSim/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">

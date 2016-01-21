@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>DepSim</title>
+        <title>Project Plan</title>
         <link rel="stylesheet" href="https://alexschneider.github.io/DepSim/theme/css/main.css" />
         <link href="https://alexschneider.github.io/DepSim/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DepSim Atom Feed" />
 
@@ -18,13 +18,38 @@
         <header id="banner" class="body">
                 <h1><a href="https://alexschneider.github.io/DepSim/">DepSim </a></h1>
                 <nav><ul>
-                    <li><a href="https://alexschneider.github.io/DepSim/pages/project-plan.html">Project Plan</a></li>
+                    <li class="active"><a href="https://alexschneider.github.io/DepSim/pages/project-plan.html">Project Plan</a></li>
                     <li><a href="https://alexschneider.github.io/DepSim/pages/proposal.html">Proposal</a></li>
                     <li><a href="https://alexschneider.github.io/DepSim/pages/requirements.html">Requirements</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">Project Plan</h1>
+    
+    <h1 id="high-level-plan">High level Plan</h1>
+<p>Build a model and simulator for deployment rollout to many machines</p>
+<p>Rollout occurs in two stages</p>
+<ol>
+<li>Deployment to subset of total machines</li>
+<li>Health checks which pauses the rollout to check for errors and build confidence in the deployment (potentially stopping or rolling back deployment)</li>
+</ol>
+<p>Create a model that describes constraints and estimates total rollout time after plugging numbers into the model. Create a simulation that runs the model to get an idea of how it happens and visualize it.</p>
+<h1 id="model">Model</h1>
+<p>The model will have to take into account several features, including:</p>
 <ul>
+<li>Constraints, e.g.:</li>
+<li>Only 50% of the capacity can be upgraded at any one time</li>
+<li>Certain parts of the domain can&rsquo;t be deployed at the same time</li>
+<li>Health checks</li>
+<li>Parallel deployment</li>
+<li>What sort of language should we use for models? Create a DSL?</li>
 </ul>
+<h1 id="simulation">Simulation</h1>
+<ul>
+<li>Failures</li>
+<li>Visualization (what sorts of things to visualize? Domains that are rolled out as they roll out? Failure rate? etc?)</li>
+</ul>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
