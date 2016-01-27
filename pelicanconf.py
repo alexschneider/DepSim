@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Alex Schneider'
 SITENAME = 'DepSim'
 SITEURL = 'https://alexschneider.github.io/DepSim/'
+GITHUB_URL = 'https://github.com/alexschneider/DepSim'
 
 PATH = 'content'
 
@@ -18,6 +19,10 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+MD_EXTENSIONS =  [ 'toc', 'codehilite','extra', 'smarty' ]
+
+PLUGIN_PATHS = ['./pelican-plugins']
+PLUGINS = ['render_math']
 
 # Blogroll
 # LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -32,4 +37,4 @@ AUTHOR_FEED_RSS = None
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True

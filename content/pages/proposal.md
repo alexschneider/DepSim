@@ -3,6 +3,8 @@ Date: 2016-1-18
 Authors: Alex Schneider
 Summary: Propose deployment simulator project.
 
+[TOC]
+
 #Title
 ##Project Name
 DepSim
@@ -24,7 +26,7 @@ The user point of view is to develop a model with constraints for the simulator 
 #Operations Description
 The application will run entirely locally on a system and have no external network access or requests. The user will double click on the application, which will launch an interface that allows them to run the simulation. It will be entirely self contained using PyInstaller, allowing users to easily download and use the application.
 
-Since the application runs locally and makes no network connections, there are no security concern. 
+Since the application runs locally and makes no network connections, there are no security concern.
 
 #Technologies
 * Python
