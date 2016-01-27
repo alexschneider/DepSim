@@ -48,6 +48,22 @@
 <li>Failures</li>
 <li>Visualization (what sorts of things to visualize? Domains that are rolled out as they roll out? Failure rate? etc?)</li>
 </ul>
+<h1 id="data-structure">Data structure</h1>
+<p>Number of regions</p>
+<p>number of data centers</p>
+<p>clusters for given service</p>
+<p>Set of racks</p>
+<p>Servers</p>
+<p>Upgrade domain</p>
+<h1 id="rollout-plan">Rollout plan</h1>
+<p>when start: start in x region with these machines</p>
+<p>Start with a cluster - wait for a certain amount of time, I&rsquo;m comfortable with the performance and that there are no bugs.</p>
+<p>As confidence builds, parallelize (go to 2 clusters rather than 1 cluster)</p>
+<p>I&rsquo;m confident that we don&rsquo;t have any bugs and roll out into more regions</p>
+<h1 id="simulator">Simulator</h1>
+<p>Probability that I&rsquo;m going to find a bug (i.e. 0.2% probability at the first cluster, and a probability of 0.1% at the 2nd or 3rd cluster)</p>
+<p>Build a graph from the nodes, connections, rollout plans - what&rsquo;s the probabilit that we&rsquo;ll hit a bug - how does the simulation let you find the bug best</p>
+<p>What number of deployments will find bugs early, middle or late - find the bugs earlier while keeping the deployment going as fast as possible - what is the sweet spoil</p>
 </section>
         <section id="extras" class="body">
         </section><!-- /#extras -->
