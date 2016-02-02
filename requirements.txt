@@ -1,0 +1,3 @@
+pyparsing==2.0.7
+simpy==3.0.8
+wheel==0.26.0
