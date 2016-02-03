@@ -1,7 +1,6 @@
 # Distributed Deployment Simulator
 
-This project is developed using Python 3.
-
+This project is developed using Python 3 using PyParsing and SimPy.
 
 #Install and Run Instructions
 To run on Unix (Linux/Mac):
