@@ -23,7 +23,41 @@ $ python depsim.py
 ```
 
 # Sample Model
+## Domain Definition
 ```
+region US West {
+  datacenter CA1 {
+    located in San Jose, CA
+    failure 0.45%
+    5 clusters {
+      failure 0.05%
+      3 racks {
+        failure 0.35%
+        8 servers {
+          failure 0.25%
+        }
+      }
+    }
+    3 clusters {
+      2 racks {
+        failure 0.5%
+        6 servers {
+          failure 0.75%
+        }
+      }
+    }
+  }
+  datacenter CA2 {
+    located in Los Angeles, CA
+    failure 0.55%
+  }
+  datacenter WA {
+    failure 0.35%
+    located in Seattle, WA
+  }
+}
+
+deployment strategy:
 
 ```
 # EBNF for Model
