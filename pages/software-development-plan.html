@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Software Development Plan</title>
+        <link rel="stylesheet" href="https://alexschneider.github.io/DepSim/theme/css/main.css" />
+        <link href="https://alexschneider.github.io/DepSim/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="DepSim Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+<a href="https://github.com/alexschneider/DepSim">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="https://alexschneider.github.io/DepSim/">DepSim </a></h1>
+                <nav><ul>
+                    <li><a href="https://alexschneider.github.io/DepSim/pages/project-plan.html">Project Plan</a></li>
+                    <li><a href="https://alexschneider.github.io/DepSim/pages/proposal.html">Proposal</a></li>
+                    <li><a href="https://alexschneider.github.io/DepSim/pages/requirements.html">Requirements</a></li>
+                    <li class="active"><a href="https://alexschneider.github.io/DepSim/pages/software-development-plan.html">Software Development Plan</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">Software Development Plan</h1>
+    
+    <h1 id="4-software-development-plan">4 Software Development Plan</h1>
+<h2 id="41-plan-introduction">4.1 Plan Introduction</h2>
+<p>The project involves a model and simulator for a deployment to many (on the order of millions) of machines. Rolling out involves deployment to an increasingly larger subset of machines, with pauses between stages to see if errors occur, and if not, building confidence in the release before going forward or rolling back. The project will accurately describe constraints and estimate total rollout time based on certain variables such as the rollout time per domain, delay times, number of domains, and number of regions.</p>
+<p>The development of the software takes place in three main stages, developing the model, the simulation, and the graphical interface. The milestones are as follows:</p>
+<ol>
+<li>Get all the moving parts working together, SimPy, Bokkeh or D3, PyWebkit, etc. Use sample data for this. 2nd week</li>
+<li>Develop a simplistic model and simulation that doesn&rsquo;t take into account additional constraints. Figure out visualization. 4th week</li>
+<li>Develop more complex models and simulations that allow constraints. 8th week</li>
+<li>Provide a graphical tool for designing models for simulation. 10th week</li>
+<li>Automatically optimize the model. Time left</li>
+</ol>
+<h3 id="411-project-deliverables">4.1.1 Project Deliverables</h3>
+<ul>
+<li>Proposal</li>
+<li>Requirements</li>
+<li>Software Development Plan</li>
+<li>Demonstration Presentations</li>
+<li>Packaged Software System</li>
+</ul>
+<h2 id="42-project-resources">4.2 Project resources</h2>
+<p>The application is fairly simple without many requirements needed to utilize it.</p>
+<h3 id="421-hardware-resources">4.2.1 Hardware resources</h3>
+<p>Since the application is locally hosted, only a single computer capable of running a modern x86 or x86_64 operating system is required. An example of one might be an Intel Core i3, 4 GB of memory, 1 GB of hard drive space, and some GPU capable of outputting a normal window to the screen (integrated GPUs work excellently).</p>
+<h3 id="422-software-resources">4.2.2 Software resources</h3>
+<p>The application comes packaged with all libraries required to run it. The computer need only have software capable of launching executables in a directory. A file manager such as Thunar or a terminal such as xterm will do.</p>
+<p>It is expected that the operating system is fully updated (Linux 4.4, Mac OSX 10.11, or Windows 10). Other versions or systems may work, but no guarentees are provided.</p>
+<p>For developing, Python 3.5.1 is used with the NeoVim editor. The following plugins are used in varying capacities during development:</p>
+<ul>
+<li>Vim sensible</li>
+<li>Vim slueth</li>
+<li>Vim fugitive</li>
+<li>Vim surround</li>
+<li>Vim speeddating</li>
+<li>Vim Repeat</li>
+<li>NERDTree</li>
+<li>Deoplete (and deoplete-jedi for Python code completion)</li>
+<li>Unite.Vim</li>
+<li>Vim airline</li>
+<li>Tagbar</li>
+<li>Syntastic</li>
+<li>Vim gitgutter</li>
+</ul>
+<p>In addition, the PyPI is used to fetch libraries, so the development machine must have PIP installed. Virtualenv is recommended (though not required) to manage differing versions of dependencies.</p>
+<h2 id="43">4.3</h2>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://alexschneider.github.io/DepSim/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
