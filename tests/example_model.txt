@@ -1,0 +1,43 @@
+region USWest {
+  5 datacenter foo {
+    2 cluster bar {
+      20 rack baz {
+        1 server {
+          /* There are 5 datacenters in group foo, each with 2 clusters named
+          bar, each with 20 racks named baz each with 1 server for a total of
+          5*2*20*1 = 200 servers */
+        }
+      }
+    }
+    3 cluster potato {
+      5 rack xylophones{
+        10 server {
+        }
+      }
+    }
+  }
+}
+
+strategy {
+  start USWest
+  confidence {
+    /* The first to deploy cluster has a 5% chance to fail, the 2nd through
+    5th cluster have a 10% chance to fail */
+    cluster 1 {
+      fail 5%
+    }
+    cluster 2-5 {
+      fail 10%
+    }
+  }
+  constraint {
+    conflict {
+      potato
+      bar
+    }
+    depend on bar {
+      potato
+    }
+    max capacity 50%
+  }
+}
