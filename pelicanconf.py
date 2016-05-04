@@ -24,6 +24,7 @@ MD_EXTENSIONS =  [ 'toc', 'codehilite','extra', 'smarty' ]
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = ['render_math']
 
+STATIC_PATHS = ['images']
 # Blogroll
 # LINKS = (('Pelican', 'http://getpelican.com/'),
 #          ('Python.org', 'http://python.org/'),
