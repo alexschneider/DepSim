@@ -6,12 +6,14 @@ region USWest {
           /* There are 5 datacenters in group foo, each with 2 clusters named
           bar, each with 20 racks named baz each with 1 server for a total of
           5*2*20*1 = 200 servers */
+          fail 5%
         }
       }
     }
     3 cluster potato {
       5 rack xylophones{
         10 server {
+        fail 10%
         }
       }
     }

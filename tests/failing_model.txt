@@ -1,0 +1,6 @@
+region USWest {
+fail 0.5
+3 datacenter {
+
+}
+}
