@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>DepSim</h1>
+          <h3>By Alex Schneider</h3>
+          <h4>CMSI 402 Spring 2016</h4>
+        </section>
+
+        <section>
+          <h1>Description</h1>
+          <ul>
+            <li>Modeling language to represent deployments across largely distributed systems consisting of millions of individual processing entities</li>
+            <li>Simulation that takes the model definition and optimizes to find the best deployment strategy</li>
+            <li>Graphical interface that displays the results of the optimizations</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Goals</h1>
+          <ul>
+            <li>Improve rollout strategy for software updates while minimizing the risk of catastrophic failure</li>
+            <li>Look for patterns and refine current methodologies for managing distributed systems</li>
+            <li>Gain experience with thinking about largely distributed systems prior to starting at Microsoft</li>
+            <li>Use as a contrivance to enter the research environment at Microsoft after I start there</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Justification</h1>
+          <ul>
+            <li>Unique problem that most computer science students don't come across in their curriculum</li>
+            <li>Has a great deal of future work or research down the line</li>
+            <li>Gain some domain knowledge prior to beginning my job</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Parts of the LMU Curriculum</h2>
+          <small>
+          <table>
+            <tr>
+              <td>
+                Theory of Computation,<br />Language Translation and Implementation
+              </td>
+              <td>
+                Designing and building a modeling  language
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Probability and Statistics
+              </td>
+              <td>
+                Processing and analyzing the data arising from the simulations
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Interaction Design
+              </td>
+              <td>
+                Designing and developing UI components and representing data in a graphical form
+              </td>
+            </tr>
+          </table>
+          </small>
+        </section>
+
+        <section>
+          <h1>User Interface</h1>
+          <img class="stretch" src="https://i.imgur.com/7bgWKsB.png">
+          <ul>
+            <li><small>Running the app starts a locally hosted web server and automatically opens the browser (soon to be a PyQT application using PyWebkit for a more native experience</small></li>
+          </ul>
+          <small><b>Note:</b> Simulation results interface not yet complete</small>
+        </section>
+
+        <section>
+          <section>
+            <h1>Problems</h1>
+            <ul>
+              <li>Distributed systems on this scale were hard to comprehend and wrap my head around. There's also not much documentation</li>
+              <li>I've never done any type of discrete event simulation project so that was a large learning curve</li>
+              <li>Frequent breaking changes on libraries (more on this next slide)</li>
+          </section>
+          <section>
+            <h1>Problems (with PyParsing)</h1>
+            <ul>
+              <li>Documentation is inconsistent and incomplete</li>
+              <li>Breaking changes</li>
+            </ul>
+            <img class="stretch" src="http://i.imgur.com/T3z0Mtd.png">
+          </section>
+          <section>
+            <img class="stretch" src="http://i.imgur.com/4i1OMSZ.png">
+          </section>
+        </section>
+
+        <section>
+          <h1>Thanks</h1>
+          <h3>Professors</h3>
+          <ul>
+            <li>Professor Johnson for teaching the class</li>
+            <li>Dr. Dorin, Dr. Toal, and Dr. Dionisio for teaching relevant classes and helping out when I had questions</li>
+          </ul>
+          <h3>Microsoft</h3>
+          <ul>
+            <li>Mike Andrews for helping come up with the idea and providing lots of support and guidance along the way</li>
+          </ul>
+          <h3>Family</h3>
+          <ul>
+            <li>All my family for supporting me</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Future Work</h1>
+          <ul>
+            <li>Improve modeling language to be more comprehensive</li>
+            <li>Write graphical interface for creating a model (so in depth knowledge of the language isn't necessary)</li>
+            <li>Finish the graphical interface for the simulation results</li>
+            <li>Package the system up for distribution</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+        margin: 0.1,
+        width: 960,
+        height: 700,
+
+        math: {
+          mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+          config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/math/math.js', async: true },
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>

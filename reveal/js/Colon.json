@@ -1,0 +1,58 @@
+{
+	"metadata": {
+		"version": 4.4,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "8137FB63-8E0F-4EF7-8DE7-D4D6850B2B6D",
+			"type": "BoxGeometry",
+			"width": 1,
+			"height": 1,
+			"depth": 1
+		},
+		{
+			"uuid": "5BCE104E-ECA8-4B1A-8CD0-EA46BAED7F20",
+			"type": "BoxGeometry",
+			"width": 1,
+			"height": 1,
+			"depth": 1
+		}],
+	"materials": [
+		{
+			"uuid": "D07D84A8-B183-4C95-AA2E-C402DE2CCF88",
+			"type": "MeshStandardMaterial",
+			"color": 16777215,
+			"emissive": 0
+		},
+		{
+			"uuid": "EDE16E85-DC09-4CC4-A090-EC97E3EB8163",
+			"type": "MeshStandardMaterial",
+			"color": 16777215,
+			"emissive": 0
+		}],
+	"object": {
+		"uuid": "3005F6E5-791F-4E4D-AAF4-F32AEC21A4B6",
+		"type": "Group",
+		"name": "Colon",
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"children": [
+			{
+				"uuid": "13A0972A-1FFD-4EC6-8E64-2507C83B15F5",
+				"type": "Mesh",
+				"name": "Top_Colon",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,2.640000104904175,0,1],
+				"geometry": "8137FB63-8E0F-4EF7-8DE7-D4D6850B2B6D",
+				"material": "D07D84A8-B183-4C95-AA2E-C402DE2CCF88"
+			},
+			{
+				"uuid": "1F40E127-82C0-448F-9FB2-7788962953FD",
+				"type": "Mesh",
+				"name": "Bottom_Colon",
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,-2.6375019550323486,0,1],
+				"geometry": "5BCE104E-ECA8-4B1A-8CD0-EA46BAED7F20",
+				"material": "EDE16E85-DC09-4CC4-A090-EC97E3EB8163"
+			}]
+	}
+}
